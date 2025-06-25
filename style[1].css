@@ -1,0 +1,50 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.logo {
+    height: 80px;
+}
+.container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+h1, h2 {
+    color: #333;
+}
+.services ul {
+    list-style: none;
+    padding-left: 0;
+}
+.services li {
+    padding: 5px 0;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+}
+form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+.gallery {
+    margin-top: 40px;
+}
+.twentytwenty-container {
+    margin: 30px auto;
+    max-width: 700px;
+}
