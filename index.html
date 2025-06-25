@@ -3,127 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MCS Entreprise - Maçonnerie</title>
+  <title>MCS Entreprise - Maçonnerie générale</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f8f8f8;
       margin: 0;
       padding: 0;
-    }
-    header {
-      background: #000;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header img {
-      height: 80px;
-    }
-    .container {
-      padding: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h1, h2 {
+      background: #f5f5f5;
       color: #333;
     }
-    ul {
-      padding: 0;
+    header {
+      background: #2e3b4e;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    nav ul {
       list-style: none;
-    }
-    .gallery-grid {
+      margin: 0;
+      padding: 0;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      background: #1d2633;
     }
-    .gallery-grid img {
-      width: 100%;
-      max-width: 300px;
+    nav li {
+      margin: 0 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+    }
+    nav a:hover {
+      background: #3e4c61;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
       border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      font-size: 18px;
+      margin-top: 10px;
     }
-    .contact input, .contact textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
+    .btn:hover {
+      background-color: #0056b3;
     }
-    .contact button {
-      padding: 10px 20px;
-      background-color: #000;
-      color: #fff;
-      border: none;
-    }
-    iframe {
-      width: 100%;
-      border: none;
-      height: 300px;
+    footer {
+      text-align: center;
+      background: #2e3b4e;
+      color: white;
+      padding: 20px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>MCS Entreprise</h1>
+    <p>Maçonnerie générale - Neuf & Rénovation</p>
+  </header>
 
-<header>
-  <img src="logo.png" alt="Logo MCS">
-  <h1>MCS Entreprise</h1>
-  <p>Richard Maréchal - Maçonnerie générale</p>
-</header>
-
-<div class="container">
-  <section>
-    <h2>Nos services</h2>
+  <nav>
     <ul>
-      <li>Maçonnerie générale (fondations, murs, dalles)</li>
-      <li>Rénovation / Agrandissement</li>
-      <li>Terrasses, murets, béton décoratif</li>
-      <li>Piscines, escaliers, piliers</li>
-      <li>Rejointoiement, maçonnerie pierre</li>
-      <li>Assurance décennale</li>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="realisations.html">Réalisations</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <section class="gallery">
-    <h2>Réalisations Avant / Après</h2>
-    <div class="gallery-grid">
-      <img src="images/Cuisisne studio avant travaux.jpg" alt="Cuisine avant">
-      <img src="images/Cuisine studio après.jpg" alt="Cuisine après">
-      <img src="images/placard avant travaux.jpg" alt="Placard avant">
-      <img src="images/Studio après travaux.jpg" alt="Studio après">
-      <img src="images/portail avant.jpg" alt="Portail ancien">
-      <img src="images/Nouveau portail.jpg" alt="Portail neuf">
-      <img src="images/Cour avant.jpg" alt="Cour avant">
-      <img src="images/Cour après.jpg" alt="Cour après">
-      <img src="images/dalle avant coulage.jpg" alt="Coffrage avant">
-      <img src="images/dalle après coulage.jpg" alt="Dalle coulée">
-      <img src="images/Intérieur sdb studio après.jpg" alt="Salle de bain">
+  <div class="container">
+    <h2>Bienvenue sur le site de MCS Entreprise</h2>
+    <p>Nous réalisons tous vos travaux de maçonnerie générale : rénovation, construction, aménagements intérieurs et extérieurs.</p>
+
+    <div class="cta">
+      <h3>Découvrez nos chantiers avant / après</h3>
+      <a href="realisations.html" class="btn">Voir les réalisations</a>
     </div>
-  </section>
+  </div>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>
-      <strong>Téléphone :</strong> 06 34 155 88 96<br/>
-      <strong>Email :</strong> mcsentreprise@outlook.com<br/>
-      <strong>Adresse :</strong> 24 Rue du Ployer, 60310 Lagny<br/>
-      <strong>Zone :</strong> 50 km autour de Lagny
-    </p>
-    <form action="https://formspree.io/f/mkgbpvae" method="POST">
-      <input type="text" name="nom" placeholder="Votre nom" required />
-      <input type="email" name="email" placeholder="Votre email" required />
-      <textarea name="message" placeholder="Votre message" rows="4" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-
-  <section>
-    <h2>Nous situer</h2>
-    <iframe src="https://maps.google.com/maps?q=24%20Rue%20du%20Ployer,%2060310%20Lagny&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-  </section>
-</div>
-
+  <footer>
+    &copy; 2025 MCS Entreprise - Tous droits réservés
+  </footer>
 </body>
+</html>
 </html>
 
 </body>
