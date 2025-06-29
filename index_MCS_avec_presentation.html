@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCS Entreprise Maréchal Richard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Logo MCS Entreprise" class="logo" />
+    <h1>MCS Entreprise</h1>
+    <p>Maçonnerie Générale - Richard Maréchal</p>
+  </header>
+
+  <section class="presentation">
+    <h2>Qui suis-je ?</h2>
+    <p>
+      Je m'appelle <strong>Richard Maréchal</strong>. Issu d’une famille d’artisans, j’ai fait mes premiers pas dans l’entreprise de maçonnerie de mon père, avant de gravir chaque échelon du métier.
+    </p>
+    <p>
+      D’abord ouvrier, puis chef d’équipe, chef de chantier et enfin conducteur de travaux, j’ai travaillé dans des entreprises de renom telles que <strong>Vinci</strong> ou <strong>Demathieu & Bard</strong>. Cette progression m’a permis d’acquérir une expertise complète du terrain jusqu’à la gestion de projets complexes.
+    </p>
+    <p>
+      Aujourd’hui, à travers <strong>MCS Entreprise</strong>, je mets cette expérience au service de mes clients avec passion, en privilégiant la qualité, le respect des normes et le travail bien fait.
+    </p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Téléphone : <a href="tel:+33634158896">06 34 15 88 96</a></p>
+    <p>Email : <a href="mailto:mcsentreprise@outlook.com">mcsentreprise@outlook.com</a></p>
+    <p>Adresse : <a href="https://maps.google.com/?q=24 Rue du Ployer, 60310 LAGNY" target="_blank">24 Rue du Ployer, 60310 LAGNY</a></p>
+  </section>
+
+  <section class="intro">
+    <h2>À propos</h2>
+    <p>Entreprise spécialisée dans la maçonnerie générale, rénovations, aménagements extérieurs, carrelage, dalles, enduits, clôtures, portails et bien plus.</p>
+  </section>
+
+  <section class="realisations-preview">
+    <h2>Quelques réalisations</h2>
+    <div class="gallery">
+      <img src="images/cour_apres.jpg" alt="Cour après" />
+      <img src="images/sdb_apres.jpg" alt="Salle de bain rénovée" />
+      <img src="images/portail_neuf.jpg" alt="Nouveau portail" />
+    </div>
+    <a class="btn" href="realisations.html">Voir toutes les réalisations</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <form action="https://formspree.io/f/mkgbpvae" method="POST">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+    <p style="text-align: center; margin-top: 1em;">
+      Une fois envoyé, vous recevrez une confirmation par email.
+    </p>
+  </section>
+
+  <p id="form-message" style="display:none; color: green; text-align: center; margin-top: 1em;">
+    Merci ! Votre message a bien été envoyé.
+  </p>
+
+  <section class="map">
+    <h2>Où nous trouver</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.138315010654!2d2.9255614!3d49.6526888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e8343a0384897d%3A0x87ed1c41cf80bba6!2s24%20Rue%20du%20Ployer%2C%2060310%20Lagny!5e0!3m2!1sfr!2sfr!4v1719320529487!5m2!1sfr!2sfr"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MCS Entreprise - Richard Maréchal</p>
+  </footer>
+</body>
+</html>
