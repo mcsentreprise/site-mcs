@@ -35,21 +35,27 @@
     <a class="btn" href="realisations.html">Voir toutes les réalisations</a>
   </section>
 
-  <section class="form-section">
-    <h2>Formulaire de contact</h2>
-    <form action="mailto:mcsentreprise@outlook.com" method="POST" enctype="text/plain">
-      <label for="nom">Nom :</label>
-      <input type="text" id="nom" name="Nom" required />
+ <section id="contact">
+  <h2>Contactez-nous</h2>
+  <form id="contact-form" action="https://formspree.io/f/VOTRE_URL_FORMSPREE_ICI" method="POST">
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="name" required>
 
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="Email" required />
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
 
-      <label for="message">Message :</label>
-      <textarea id="message" name="Message" rows="5" required></textarea>
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <!-- Message de confirmation -->
+  <p id="form-message" style="display:none; color: green; text-align: center; margin-top: 1em;">
+    Merci ! Votre message a bien été envoyé.
+  </p>
+</section>
+
 
   <section class="map">
     <h2>Où nous trouver</h2>
