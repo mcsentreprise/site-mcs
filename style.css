@@ -1,156 +1,152 @@
-/* Style global */
-body {
-  font-family: Arial, sans-serif;
+/* === Reset === */
+* {
   margin: 0;
   padding: 0;
-  background-color: #fdfdfd;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
   color: #333;
 }
 
-h1, h2 {
-  color: #2c3e50;
-  text-align: center;
-}
-
-a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Header */
+/* === Header === */
 header {
-  background-color: #f2f2f2;
-  padding: 1.5em;
   text-align: center;
-  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  background: #222;
+  color: #fff;
 }
 
-.logo {
-  max-width: 150px;
-  margin-bottom: 0.5em;
+header .logo {
+  max-width: 120px;
+  display: block;
+  margin: 0 auto 10px;
 }
 
-/* Sections */
+header h1 {
+  font-size: 2rem;
+}
+
+header p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* === Slider === */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 20px 0;
+}
+
+.slides {
+  display: flex;
+  animation: slide 15s infinite;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+/* === Section générale === */
 section {
-  padding: 2em 1em;
+  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-.intro p,
-.contact p {
+h2 {
   text-align: center;
-  max-width: 700px;
-  margin: auto;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #222;
 }
 
-/* Réalisations */
-.gallery {
+/* === Boutons === */
+.cta {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
   justify-content: center;
-  margin-top: 1em;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+/* === Galerie réalisations === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .gallery img {
   width: 100%;
-  max-width: 300px;
-  height: auto;
   border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-.btn {
-  display: block;
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* === Contact === */
+#contact p {
+  margin: 8px 0;
   text-align: center;
-  background-color: #3498db;
-  color: white;
-  padding: 1em 1.5em;
-  margin: 2em auto 0;
-  max-width: 250px;
-  border-radius: 8px;
-  font-weight: bold;
 }
 
-.btn:hover {
-  background-color: #2980b9;
-}
-
-/* Formulaire */
-form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-label {
-  font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 0.8em;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button {
-  padding: 1em;
-  background-color: #27ae60;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #219150;
-}
-
-/* Carte Google */
-.map iframe {
-  width: 100%;
-  height: 300px;
-  border: none;
+#contact iframe {
+  margin-top: 15px;
   border-radius: 10px;
-  margin-top: 1em;
 }
 
-/* Footer */
+/* === Lien retour === */
+.back {
+  display: inline-block;
+  margin: 15px;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* === Footer === */
 footer {
+  background: #222;
+  color: #fff;
   text-align: center;
-  padding: 1em;
-  background-color: #f2f2f2;
-  border-top: 1px solid #ccc;
-  margin-top: 3em;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
-  width: 100%;
-  border-radius: 10px;
+  padding: 15px;
+  margin-top: 30px;
 }
