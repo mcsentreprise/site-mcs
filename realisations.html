@@ -1,108 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Réalisations - MCS Entreprise</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-    }
-    header {
-      background: #333;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
-    a.back {
-      display: inline-block;
-      margin: 10px;
-      color: #333;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    /* Lightbox */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-    .lightbox:target {
-      display: flex;
-    }
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      font-size: 40px;
-      color: white;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
+    <a href="index.html" class="back">&larr; Retour à l'accueil</a>
     <h1>Nos réalisations</h1>
   </header>
-  <a href="index.html" class="back">&larr; Retour à l'accueil</a>
+
   <section class="gallery">
-    <a href="#img1"><img src="images/Grange Lagny après.jpg" alt="Grange Lagny après"></a>
-    <a href="#img2"><img src="images/Portail_Gizancourt_après.jpg" alt="Portail Gizancourt après"></a>
-    <a href="#img3"><img src="images/Terrasse_Gury.jpg" alt="Terrasse Gury"></a>
-    <a href="#img4"><img src="images/Terrasse_Candor_après.jpg" alt="Terrasse Candor après"></a>
-    <a href="#img5"><img src="images/Portail Caisnes.jpg" alt="Portail Caisnes"></a>
-    <a href="#img6"><img src="images/Devanture_caisnes.jpg" alt="Devanture Caisnes"></a>
-    <a href="#img7"><img src="images/Escalier Lagny.jpg" alt="Escalier Lagny"></a>
-    <a href="#img9"><img src="images/Garage double Marest Dampcourt.jpg" alt="Garage double Marest Dampcourt"></a>
+    <a href="images/grange_avant.jpg" data-lightbox="realisations" data-title="Grange avant">
+      <img src="images/grange_avant.jpg" alt="Grange avant">
+    </a>
+    <a href="images/grange_lagny_apres.jpg" data-lightbox="realisations" data-title="Grange Lagny après">
+      <img src="images/grange_lagny_apres.jpg" alt="Grange Lagny après">
+    </a>
+    <a href="images/portail_caisnes.jpg" data-lightbox="realisations" data-title="Portail Caisnes">
+      <img src="images/portail_caisnes.jpg" alt="Portail Caisnes">
+    </a>
+    <a href="images/portail_gizancourt_apres.jpg" data-lightbox="realisations" data-title="Portail Gizancourt après">
+      <img src="images/portail_gizancourt_apres.jpg" alt="Portail Gizancourt après">
+    </a>
+    <a href="images/terrasse_candor_apres.jpg" data-lightbox="realisations" data-title="Terrasse Candor après">
+      <img src="images/terrasse_candor_apres.jpg" alt="Terrasse Candor après">
+    </a>
+    <a href="images/terrasse_gury.jpg" data-lightbox="realisations" data-title="Terrasse Gury">
+      <img src="images/terrasse_gury.jpg" alt="Terrasse Gury">
+    </a>
+    <a href="images/escalier_lagny.jpg" data-lightbox="realisations" data-title="Escalier Lagny">
+      <img src="images/escalier_lagny.jpg" alt="Escalier Lagny">
+    </a>
+    <a href="images/garage_double_marest_dampcourt.jpg" data-lightbox="realisations" data-title="Garage double Marest Dampcourt">
+      <img src="images/garage_double_marest_dampcourt.jpg" alt="Garage double Marest Dampcourt">
+    </a>
+    <a href="images/devanture_caisnes.jpg" data-lightbox="realisations" data-title="Devanture Caisnes">
+      <img src="images/devanture_caisnes.jpg" alt="Devanture Caisnes">
+    </a>
   </section>
 
-  <!-- Lightbox -->
-  <div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Grange Lagny après.jpg" alt=""></div>
-  <div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Portail_Gizancourt_après.jpg" alt=""></div>
-  <div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Terrasse_Gury.jpg" alt=""></div>
-  <div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Terrasse_Candor_après.jpg" alt=""></div>
-  <div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Portail Caisnes.jpg" alt=""></div>
-  <div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Devanture_caisnes.jpg" alt=""></div>
-  <div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Escalier Lagny.jpg" alt=""></div>
-  <div id="img8" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Grange_avant.jpg" alt=""></div>
-  <div id="img9" class="lightbox"><a href="#" class="close">&times;</a><img src="images/Garage double Marest Dampcourt.jpg" alt=""></div>
+  <footer>
+    <p>&copy; 2025 MCS Entreprise - Tous droits réservés</p>
+  </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
