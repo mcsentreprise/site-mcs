@@ -3,147 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MCS Entreprise - Accueil</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth; /* défilement fluide activé */
-    }
-    /* SLIDER */
-    .slider {
-      position: relative;
-      width: 100%;
-      height: 80vh;
-      overflow: hidden;
-    }
-    .slides {
-      display: flex;
-      width: 300%;
-      height: 100%;
-      animation: slide 12s infinite;
-    }
-    .slides img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    @keyframes slide {
-      0%   { transform: translateX(0); }
-      30%  { transform: translateX(0); }
-      33%  { transform: translateX(-100%); }
-      63%  { transform: translateX(-100%); }
-      66%  { transform: translateX(-200%); }
-      96%  { transform: translateX(-200%); }
-      100% { transform: translateX(0); }
-    }
-    /* Points de navigation */
-    .dots {
-      position: absolute;
-      bottom: 80px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-      z-index: 2;
-    }
-    .dots span {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.7);
-      display: block;
-    }
-    /* BOUTONS */
-    .cta-container {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 15px;
-      z-index: 2;
-    }
-    .cta-button {
-      padding: 14px 28px;
-      background: rgba(211, 84, 0, 0.85);
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      transition: background 0.3s, transform 0.2s;
-    }
-    .cta-button:hover {
-      background: rgba(230, 126, 34, 0.95);
-      transform: scale(1.05);
-    }
-    /* FADE-IN SECTIONS */
-    section {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 1.2s ease, transform 1.2s ease;
-      padding: 50px 20px;
-    }
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <title>MCS Entreprise - Maçonnerie Générale</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- SLIDER -->
-  <div class="slider">
+  <header>
+    <img src="images/logo.png" alt="Logo MCS Entreprise" class="logo">
+    <h1>MCS Entreprise</h1>
+    <p>Maçonnerie générale - Maréchal Richard</p>
+  </header>
+
+  <!-- Slider -->
+  <section class="slider">
     <div class="slides">
-      <img src="images/Cour après.jpg" alt="Cour après">
-      <img src="images/Terrasse_Candor_après.jpg" alt="Terrasse Candor après">
-      <img src="images/Devanture_caisnes.jpg" alt="Devanture Caisnes">
+      <img src="images/cour_apres.jpg" alt="Cour après">
+      <img src="images/terrasse_candor_apres.jpg" alt="Terrasse Candor après">
+      <img src="images/devanture_caisnes.jpg" alt="Devanture Caisnes">
     </div>
-    <div class="dots">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <!-- BOUTONS -->
-    <div class="cta-container">
-      <a href="realisations.html" class="cta-button">Voir nos réalisations</a>
-      <a href="#contact" class="cta-button">Contactez-nous</a>
-    </div>
-  </div>
-
-  <!-- SECTIONS (exemples) -->
-  <section id="about">
-    <h2>À propos</h2>
-    <p>Texte de présentation de l'entreprise...</p>
   </section>
 
-  <section id="services">
-    <h2>Nos services</h2>
-    <p>Description des services proposés...</p>
+  <!-- Présentation -->
+  <section class="about">
+    <h2>Bienvenue chez MCS Entreprise</h2>
+    <p>
+      Spécialisée dans la <strong>maçonnerie générale</strong>, MCS Entreprise réalise vos projets de construction,
+      rénovation et aménagement extérieur. Avec plus de 15 ans d’expérience, nous mettons notre savoir-faire à votre service
+      pour garantir des travaux de qualité.
+    </p>
   </section>
 
-  <section id="realisations">
-    <h2>Réalisations</h2>
-    <p>Aperçu des projets effectués...</p>
+  <!-- Boutons -->
+  <section class="cta">
+    <a href="realisations.html" class="btn">Voir nos réalisations</a>
+    <a href="#contact" class="btn">Contactez-nous</a>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
-    <h2>Contactez-nous</h2>
-    <p>Votre formulaire de contact ici</p>
+    <h2>Contact</h2>
+    <p>Téléphone : <a href="tel:+33634158896">06 34 15 88 96</a></p>
+    <p>Email : <a href="mailto:mcsentreprise@outlook.com">mcsentreprise@outlook.com</a></p>
+    <p>Adresse : 24 Rue du Ployer, 60310 LAGNY</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.760897918081!2d3.027944!3d49.562836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e83b29d2d8f5e1%3A0x40af13e816418e0!2s24%20Rue%20du%20Ployer%2C%2060310%20Lagny!5e0!3m2!1sfr!2sfr!4v1719333967000!5m2!1sfr!2sfr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
-  <script>
-    // Observer pour activer le fade-in sur toutes les sections
-    const sections = document.querySelectorAll("section");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
+  <footer>
+    <p>&copy; 2025 MCS Entreprise - Tous droits réservés</p>
+  </footer>
 
-    sections.forEach(section => observer.observe(section));
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
+
 
