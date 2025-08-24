@@ -3,57 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MCS Entreprise - Maçonnerie Générale</title>
+  <title>MCS Entreprise - Maçonnerie générale</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <img src="images/logo.png" alt="Logo MCS Entreprise" class="logo">
-    <h1>MCS Entreprise</h1>
-    <p>Maçonnerie générale - Maréchal Richard</p>
+    <div class="container">
+      <img src="images/logo.png" alt="MCS Entreprise" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Slider -->
-  <section class="slider">
-    <div class="slides">
-      <img src="images/cour_apres.jpg" alt="Cour après">
-      <img src="images/terrasse_candor_apres.jpg" alt="Terrasse Candor après">
-      <img src="images/devanture_caisnes.jpg" alt="Devanture Caisnes">
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1>MCS Entreprise</h1>
+    <p>Travaux de maçonnerie générale et rénovation</p>
+    <div class="hero-images">
+      <img src="images/cour_apres.jpg" alt="Cour rénovée">
+      <img src="images/Terrasse_Candor_après.jpg" alt="Terrasse Candor">
+      <img src="images/Devanture_caisnes.jpg" alt="Devanture Caisnes">
     </div>
   </section>
 
-  <!-- Présentation -->
-  <section class="about">
-    <h2>Bienvenue chez MCS Entreprise</h2>
-    <p>
-      Spécialisée dans la <strong>maçonnerie générale</strong>, MCS Entreprise réalise vos projets de construction,
-      rénovation et aménagement extérieur. Avec plus de 15 ans d’expérience, nous mettons notre savoir-faire à votre service
-      pour garantir des travaux de qualité.
-    </p>
+  <!-- Réalisations -->
+  <section id="realisations" class="realisations">
+    <h2>Nos réalisations</h2>
+    <p><a href="realisations.html" class="btn">Voir toutes les réalisations</a></p>
   </section>
 
-  <!-- Boutons -->
-  <section class="cta">
-    <a href="realisations.html" class="btn">Voir nos réalisations</a>
-    <a href="#contact" class="btn">Contactez-nous</a>
+  <!-- À propos -->
+  <section id="about" class="about">
+    <h2>À propos</h2>
+    <div class="about-container">
+      <img src="images/richard-marechal.jpg" alt="Richard Maréchal" class="about-photo">
+      <div class="about-text">
+        <p>
+          J'ai commencé en bas de l'échelle pour finir conducteur de travaux.<br>
+          Je suis passé par toutes les étapes : ouvrier, chef d'équipe, chef de chantier et enfin conducteur de travaux.<br>
+          J'ai aussi travaillé dans l'entreprise de maçonnerie de mon père.<br>
+          Je suis passé par des grands groupes de bâtiment notamment Vinci.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Téléphone : <a href="tel:+33634158896">06 34 15 88 96</a></p>
-    <p>Email : <a href="mailto:mcsentreprise@outlook.com">mcsentreprise@outlook.com</a></p>
-    <p>Adresse : 24 Rue du Ployer, 60310 LAGNY</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.760897918081!2d3.027944!3d49.562836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e83b29d2d8f5e1%3A0x40af13e816418e0!2s24%20Rue%20du%20Ployer%2C%2060310%20Lagny!5e0!3m2!1sfr!2sfr!4v1719333967000!5m2!1sfr!2sfr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  <section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <p><strong>Téléphone :</strong> <a href="tel:0634158896">06 34 15 88 96</a></p>
+    <p><strong>Email :</strong> <a href="mailto:mcsentreprise@outlook.com">mcsentreprise@outlook.com</a></p>
+    <p><strong>Adresse :</strong> <a href="https://maps.google.com/?q=24 Rue du Ployer, 60310 LAGNY" target="_blank">
+      24 Rue du Ployer, 60310 LAGNY
+    </a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 MCS Entreprise - Tous droits réservés</p>
   </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
+
 
 
