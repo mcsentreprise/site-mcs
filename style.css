@@ -1,152 +1,194 @@
-/* === Reset === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Style global */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-/* === Header === */
-header {
-  text-align: center;
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
   padding: 20px;
+}
+
+/* Header */
+header {
   background: #222;
   color: #fff;
+  padding: 10px 0;
 }
 
 header .logo {
-  max-width: 120px;
-  display: block;
-  margin: 0 auto 10px;
+  height: 60px;
 }
 
-header h1 {
-  font-size: 2rem;
-}
-
-header p {
-  font-size: 1rem;
-  color: #ddd;
-}
-
-/* === Slider === */
-.slider {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin: 20px 0;
-}
-
-.slides {
+header nav ul {
+  list-style: none;
   display: flex;
-  animation: slide 15s infinite;
+  margin: 0;
+  padding: 0;
 }
 
-.slides img {
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 10px;
+header nav ul li {
+  margin: 0 15px;
 }
 
-@keyframes slide {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(0); }
-  25% { transform: translateX(-100%); }
-  45% { transform: translateX(-100%); }
-  50% { transform: translateX(-200%); }
-  70% { transform: translateX(-200%); }
-  75% { transform: translateX(0); }
-  100% { transform: translateX(0); }
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-/* === Section générale === */
-section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+header nav ul li a:hover {
+  color: #f39c12;
 }
 
-h2 {
+/* Hero */
+.hero {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  color: #222;
+  padding: 50px 20px;
+  background: #eee;
 }
 
-/* === Boutons === */
-.cta {
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-images {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.hero-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Réalisations */
+.realisations {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.realisations h2 {
+  margin-bottom: 20px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 20px;
-  background: #222;
+  background: #f39c12;
   color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #555;
+  background: #d35400;
 }
 
-/* === Galerie réalisations === */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+/* À propos */
+.about {
+  background: #f4f4f4;
+  padding: 50px 20px;
 }
 
-.gallery img {
-  width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* === Contact === */
-#contact p {
-  margin: 8px 0;
+.about h2 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
-#contact iframe {
-  margin-top: 15px;
-  border-radius: 10px;
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-/* === Lien retour === */
-.back {
-  display: inline-block;
-  margin: 15px;
+/* Animation */
+.about-photo, 
+.about-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.about-photo {
+  animation-delay: 0.3s;
+}
+
+.about-text {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-photo {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+/* Contact */
+.contact {
+  background: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #f39c12;
   text-decoration: none;
-  color: #222;
   font-weight: bold;
 }
 
-.back:hover {
+.contact a:hover {
   text-decoration: underline;
 }
 
-/* === Footer === */
+/* Footer */
 footer {
   background: #222;
   color: #fff;
   text-align: center;
-  padding: 15px;
+  padding: 15px 0;
   margin-top: 30px;
 }
