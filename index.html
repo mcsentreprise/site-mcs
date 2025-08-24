@@ -6,72 +6,34 @@
   <title>MCS Entreprise - Maçonnerie Générale</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      padding: 30px 10px;
-      background: #222;
-      color: white;
-    }
-    header img {
-      max-width: 150px;
-      margin-bottom: 10px;
-    }
-    nav {
-      margin: 15px 0;
-    }
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    /* --- Carte de présentation --- */
-    .about-card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      padding: 30px;
-      text-align: center;
-      max-width: 700px;
-      margin: auto;
-    }
-    .about-photo {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
+    /* --- Slider Hero --- */
+    .hero-slider {
+      position: relative;
+      width: 100%;
+      max-width: 1000px; /* largeur maximale du slider */
+      height: 450px;     /* hauteur du slider */
+      margin: 0 auto 40px auto;
+      overflow: hidden;
+      border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-      margin-bottom: 20px;
     }
-    .about-card p {
-      font-size: 1.1em;
-      line-height: 1.6em;
+
+    .hero-slider .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
+
+    .hero-slider .slide.active {
+      opacity: 1;
+    }
+
+    .hero-slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* agrandit l'image et garde les proportions */
     }
   </style>
 </head>
@@ -80,18 +42,26 @@
   <header>
     <img src="images/logo.png" alt="Logo MCS Entreprise">
     <h1>MCS Entreprise - Maçonnerie Générale</h1>
-    <div class="hero-images">
-      <img src="images/cour_apres.jpg" alt="Cour rénovée">
-      <img src="images/terrasse_candor_apres.jpg" alt="Terrasse Candor">
-      <img src="images/devanture_caisnes.jpg" alt="Devanture Caisnes">
-    </div>
-  </section>
+
     <nav>
       <a href="#about">Présentation</a>
       <a href="#realisations">Réalisations</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
+
+  <!-- Slider des 3 images de chantier -->
+  <div class="hero-slider">
+    <div class="slide active">
+      <img src="images/cour_apres.jpg" alt="Cour rénovée">
+    </div>
+    <div class="slide">
+      <img src="images/terrasse_candor_apres.jpg" alt="Terrasse Candor">
+    </div>
+    <div class="slide">
+      <img src="images/devanture_caisnes.jpg" alt="Devanture Caisnes">
+    </div>
+  </div>
 
   <section id="about">
     <h2>À propos</h2>
@@ -130,8 +100,21 @@
     <p>&copy; 2025 MCS Entreprise - Tous droits réservés</p>
   </footer>
 
+  <script>
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    let currentSlide = 0;
+    const slideInterval = 3000; // 3 secondes par image
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(nextSlide, slideInterval);
+  </script>
+
 </body>
 </html>
-
 
 
