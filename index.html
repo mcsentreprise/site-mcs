@@ -3,72 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MCS Entreprise - Maçonnerie générale</title>
+  <title>MCS Entreprise - Maçonnerie Générale</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 30px 10px;
+      background: #222;
+      color: white;
+    }
+    header img {
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+    nav {
+      margin: 15px 0;
+    }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    /* --- Carte de présentation --- */
+    .about-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+    .about-photo {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      margin-bottom: 20px;
+    }
+    .about-card p {
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header>
-    <div class="container">
-      <img src="images/logo.png" alt="MCS Entreprise" class="logo">
-      <nav>
-        <ul>
-          <li><a href="#hero">Accueil</a></li>
-          <li><a href="#realisations">Réalisations</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <img src="logo.png" alt="Logo MCS Entreprise">
+    <h1>MCS Entreprise - Maçonnerie Générale</h1>
+    <nav>
+      <a href="#about">Présentation</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <h1>MCS Entreprise</h1>
-    <p>Travaux de maçonnerie générale et rénovation</p>
-    <div class="hero-images">
-      <img src="images/cour_apres.jpg" alt="Cour rénovée">
-      <img src="images/Terrasse_Candor_après.jpg" alt="Terrasse Candor">
-      <img src="images/Devanture_caisnes.jpg" alt="Devanture Caisnes">
-    </div>
-  </section>
-
-  <!-- Réalisations -->
-  <section id="realisations" class="realisations">
-    <h2>Nos réalisations</h2>
-    <p><a href="realisations.html" class="btn">Voir toutes les réalisations</a></p>
-  </section>
-
-  <!-- À propos -->
-  <section id="about" class="about">
+  <section id="about">
     <h2>À propos</h2>
-    <div class="about-container">
-      <img src="images/richard-marechal.jpg" alt="Richard Maréchal" class="about-photo">
-      <div class="about-text">
-        <p>
-          J'ai commencé en bas de l'échelle pour finir conducteur de travaux.<br>
-          Je suis passé par toutes les étapes : ouvrier, chef d'équipe, chef de chantier et enfin conducteur de travaux.<br>
-          J'ai aussi travaillé dans l'entreprise de maçonnerie de mon père.<br>
-          Je suis passé par des grands groupes de bâtiment notamment Vinci.
-        </p>
-      </div>
+    <div class="about-card">
+      <img src="richard-marechal.jpg" alt="Richard Maréchal" class="about-photo">
+      <p>
+        Je suis Richard Maréchal, gérant de <strong>MCS Entreprise</strong>.  
+        J’ai commencé en bas de l’échelle pour finir conducteur de travaux.  
+        Je suis passé par toutes les étapes : ouvrier, chef d’équipe, chef de chantier et enfin conducteur de travaux.  
+        J’ai aussi travaillé dans l’entreprise de maçonnerie de mon père.  
+        J’ai eu l’opportunité d’évoluer dans des grands groupes du bâtiment comme <strong>VINCI</strong>.
+      </p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contactez-nous</h2>
-    <p><strong>Téléphone :</strong> <a href="tel:0634158896">06 34 15 88 96</a></p>
-    <p><strong>Email :</strong> <a href="mailto:mcsentreprise@outlook.com">mcsentreprise@outlook.com</a></p>
-    <p><strong>Adresse :</strong> <a href="https://maps.google.com/?q=24 Rue du Ployer, 60310 LAGNY" target="_blank">
-      24 Rue du Ployer, 60310 LAGNY
-    </a></p>
+  <section id="realisations">
+    <h2>Nos Réalisations</h2>
+    <p style="text-align:center;">Découvrez quelques-unes de nos réalisations sur la page dédiée.</p>
+    <p style="text-align:center;"><a href="realisations.html">Voir toutes les réalisations</a></p>
   </section>
 
-  <!-- Footer -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">
+      📍 24 Rue du Ployer, 60310 LAGNY <br>
+      📞 <a href="tel:0634158896">06 34 15 88 96</a> <br>
+      ✉️ <a href="mailto:mcsentreprise@outlook.com">mcsentreprise@outlook.com</a>
+    </p>
+    <div style="text-align:center;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2533.123456789!2d3.1234567!3d49.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e83c123456789%3A0x123456789abcdef!2s24%20Rue%20du%20Ployer%2C%2060310%20Lagny!5e0!3m2!1sfr!2sfr!4v0000000000"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
   <footer>
     <p>&copy; 2025 MCS Entreprise - Tous droits réservés</p>
   </footer>
+
 </body>
 </html>
 
